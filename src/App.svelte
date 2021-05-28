@@ -1,4 +1,8 @@
 <script>
+    let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
+    let vueLogoSrc = "http://localhost:5001/assets/images/vue-logo.png";
+    let angularLogoSrc = "http://localhost:5001/assets/images/angular-logo.svg";
+    let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg"
 </script>
 
 <style>
@@ -32,7 +36,7 @@
 
     /* Declare heights because of positioning of img element */
     .carousel-item {
-        height: 32rem;
+        height: 24rem;
     }
     .carousel-item > img {
         position: absolute;
@@ -99,6 +103,9 @@
             margin-top: 7rem;
         }
     }
+    #single-spa-svg {
+        width: 30px;
+    }
 </style>
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -113,9 +120,9 @@
 
                 <div class="container">
                     <div class="carousel-caption text-start">
-                        <h1>Example headline.</h1>
-                        <p>Some representative placeholder content for the first slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                        <h1>single-spa <img id="single-spa-svg" src={singleSpaSVGSrc}/> </h1>
+                        <p>A javascript router for front-end microservices.</p>
+                        <p><a class="btn btn-lg btn-primary" href="https://single-spa.js.org/" target="_blank" rel="noopener noreferrer">Learn More</a></p>
                     </div>
                 </div>
             </div>
@@ -124,9 +131,9 @@
 
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        <h1>Web Components</h1>
+                        <p>Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps.</p>
+                        <p><a class="btn btn-lg btn-primary" href="https://www.webcomponents.org/" target="_blank" rel="noopener noreferrer">Learn more</a></p>
                     </div>
                 </div>
             </div>
@@ -135,8 +142,8 @@
 
                 <div class="container">
                     <div class="carousel-caption text-end">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
+                        <h1>Javascript Frameworks</h1>
+                        <p>JavaScript frameworks are application frameworks written in JavaScript where programmers can manipulate the functions and use them for their convenience.</p>
                         <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
                     </div>
                 </div>
@@ -158,30 +165,39 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
+        <div class="d-flex mb-4">
+            <h1 class="mx-auto">The Featured Frameworks</h1>
+        </div>
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    <image class="w-75" x="12.5%" y="17.5%" xlink:href={ vueLogoSrc }/>
+                </svg>
 
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                <h2>Vue.js</h2>
+                <p>The Progressive JavaScript Framework</p>
+                <p><a class="btn btn-secondary" href="https://v3.vuejs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    <image class="w-75" x="12.5%" y="13%" xlink:href={ angularLogoSrc }/>
+                </svg>
 
-                <h2>Heading</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                <h2>Angular</h2>
+                <p>The modern web developer's platform</p>
+                <p><a class="btn btn-secondary" href="https://angular.io/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    <image class="w-100" y="15%" xlink:href={ reactLogoSrc }/>
+                </svg>
 
-                <h2>Heading</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                <h2>React</h2>
+                <p>A JavaScript library for building user interfaces</p>
+                <p><a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
+
         </div><!-- /.row -->
 
 

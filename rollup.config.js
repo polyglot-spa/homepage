@@ -3,6 +3,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
+import postcss from "rollup-plugin-postcss";
+import copy from "rollup-plugin-copy-assets";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -15,6 +17,16 @@ export default {
     file: "dist/carter-website-homepage-cw.js",
   },
   plugins: [
+    postcss({
+      extensions: [ '.css' ],
+    }),
+    copy(
+        {
+          assets: [
+            "src/assets"
+          ]
+        }
+    ),
     svelte({
       // enable run-time checks when not in production
       dev: !production,
