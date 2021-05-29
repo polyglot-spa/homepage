@@ -2,7 +2,8 @@
     let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
     let vueLogoSrc = "http://localhost:5001/assets/images/vue-logo.png";
     let angularLogoSrc = "http://localhost:5001/assets/images/angular-logo.svg";
-    let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg"
+    let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg";
+    let svelteLogoSrc = "http://localhost:5001/assets/images/svelte-logo-horizontal.svg";
 </script>
 
 <style>
@@ -106,6 +107,9 @@
     #single-spa-svg {
         width: 30px;
     }
+    #svelte-logo {
+        width: 180px;
+    }
 </style>
 
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -144,7 +148,7 @@
                     <div class="carousel-caption text-end">
                         <h1>Javascript Frameworks</h1>
                         <p>JavaScript frameworks are application frameworks written in JavaScript where programmers can manipulate the functions and use them for their convenience.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Our Frameworks</a></p>
                     </div>
                 </div>
             </div>
@@ -165,7 +169,7 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-        <div class="d-flex mb-4">
+        <div class="d-flex mb-3">
             <h1 class="mx-auto">The Featured Frameworks</h1>
         </div>
         <!-- Three columns of text below the carousel -->
@@ -175,7 +179,7 @@
                     <image class="w-75" x="12.5%" y="17.5%" xlink:href={ vueLogoSrc }/>
                 </svg>
 
-                <h2>Vue.js</h2>
+                <h2 class="mt-1">Vue.js</h2>
                 <p>The Progressive JavaScript Framework</p>
                 <p><a class="btn btn-secondary" href="https://v3.vuejs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
@@ -184,7 +188,7 @@
                     <image class="w-75" x="12.5%" y="13%" xlink:href={ angularLogoSrc }/>
                 </svg>
 
-                <h2>Angular</h2>
+                <h2 class="mt-1">Angular</h2>
                 <p>The modern web developer's platform</p>
                 <p><a class="btn btn-secondary" href="https://angular.io/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
@@ -193,7 +197,7 @@
                     <image class="w-100" y="15%" xlink:href={ reactLogoSrc }/>
                 </svg>
 
-                <h2>React</h2>
+                <h2 class="mt-1">React</h2>
                 <p>A JavaScript library for building user interfaces</p>
                 <p><a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
@@ -204,15 +208,17 @@
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
+        <div class="d-flex mb-3">
+            <h1 class="mx-auto">The Supporting Cast</h1>
+        </div>
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                <h2 class="featurette-heading"><img id="svelte-logo"src={svelteLogoSrc}/> <span class="text-muted">Cybernetically enhanced web apps</span></h2>
+                <p class="lead mt-2">Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.</p>
             </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+            <div class="col-md-5 position-relative">
+                <p><a style="width: 230px;" class="btn btn-lg btn-primary position-absolute top-50 start-50 translate-middle mt-4" href="https://svelte.dev/" target="_blank" rel="noopener noreferrer">View Documentation</a></p>
             </div>
         </div>
 
@@ -220,24 +226,31 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                <h2 class="featurette-heading">Bootstrap v5.x.x <span class="text-muted">Build fast, responsive sites with Bootstrap</span></h2>
+                <p class="lead mt-2">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             </div>
-            <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <div class="col-md-5 order-md-1 position-relative">
+                <p><a style="width: 230px;" class="btn btn-lg btn-primary position-absolute top-50 start-50 translate-middle mt-4" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">View Documentation</a></p>
 
             </div>
         </div>
 
         <hr class="featurette-divider">
-
+        <div class="d-flex mb-3">
+            <h1 class="mx-auto">And as Custom Element</h1>
+        </div>
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <h2 class="featurette-heading">chessboard-element <span class="text-muted">A &lt;chess-board&gt; element for your web pages</span></h2>
+                <p class="lead mt-2">
+                    The purpose of this application was to gain experience using custom elements within an Angular, React or Vue library/framework.
+                    Therefore, it is only possible to play as white, though you can change the board orientation, and the moves made by the application are <a href="https://github.com/jhlywa/chess.js" target="_blank" rel="noopener noreferrer">random</a>.
+                    Custom elements compatibility with different libraries/frameworks can be viewed
+                    <a href="https://custom-elements-everywhere.com/" target="_blank" rel="noopener noreferrer">here</a>.
+                </p>
             </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            <div class="col-md-5 position-relative">
+                <p><a style="width: 230px;" class="btn btn-lg btn-primary position-absolute top-50 start-50 translate-middle mt-4" href="https://justinfagnani.github.io/chessboard-element/" target="_blank" rel="noopener noreferrer">View Documentation</a></p>
 
             </div>
         </div>
