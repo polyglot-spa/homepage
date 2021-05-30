@@ -130,31 +130,31 @@
             </button>
         </div>
         <div class="modal-body">
-            <div>
+            <div class="mb-2">
                 <h2>single-spa</h2>
                 <span>It provides a layout engine. The layout engine is responsible for creating, destroying, and rearranging dom elements during route transitions.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>Bootstrap</h2>
                 <span>It provides css transitions and tools to aid in the stying elements.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>Vue</h2>
                 <span>It is used in a microfrontend that is active when the route equals 'vue'.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>React</h2>
                 <span>It is used in a microfrontend that is active when the route equals 'react'.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>Angular</h2>
                 <span>It is used in a microfrontend that is active when the route equals 'angular'.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>Svelte</h2>
                 <span>It is used in multiple microfrontends and is active in the navbar, footer and homepage.</span>
             </div>
-            <div>
+            <div class="mb-2">
                 <h2>chessboard-element</h2>
                 <span>It is the custom element that is at the center of the Vue, React and Angular microfrontends.</span>
             </div>
@@ -297,7 +297,7 @@
                     The purpose of this application was to gain experience using custom elements within an Angular, React or Vue library/framework.
                     Therefore, it is only possible to play as white, though you can change the board orientation, and the moves made by the application are <a href="https://github.com/jhlywa/chess.js" target="_blank" rel="noopener noreferrer">random</a>.
                     If you would like to play another game refresh the page. More functionality will be added in the future.
-                    Custom elements compatibility with different libraries/frameworks can be viewed
+                    Custom elements' compatibility with different libraries/frameworks can be viewed
                     <a href="https://custom-elements-everywhere.com/" target="_blank" rel="noopener noreferrer">here</a>.
                 </p>
             </div>
