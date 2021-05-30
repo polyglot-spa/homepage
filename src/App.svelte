@@ -78,6 +78,10 @@
         margin: 5rem 0; /* Space out the Bootstrap <hr> more */
     }
 
+    .featurette-divider:last-of-type {
+        margin: 5rem 0 1rem;
+    }
+
     /* Thin out the marketing headings */
     .featurette-heading {
         font-weight: 300;
