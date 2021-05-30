@@ -1,9 +1,13 @@
 <script>
+    import Modal from "sv-bootstrap-modal";
+    let isOpen = false;
+
     let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
     let vueLogoSrc = "http://localhost:5001/assets/images/vue-logo.png";
     let angularLogoSrc = "http://localhost:5001/assets/images/angular-logo.svg";
     let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg";
     let svelteLogoSrc = "http://localhost:5001/assets/images/svelte-logo-horizontal.svg";
+    let bootstrapLogoSrc = "http://localhost:5001/assets/images/Bootstrap_logo.svg";
 </script>
 
 <style>
@@ -110,8 +114,55 @@
     #svelte-logo {
         width: 180px;
     }
+    #bootstrap-logo {
+        width: 50px;
+    }
+    .modal-title {
+        font-family: Bananas-Personal;
+        font-size: 60px;
+    }
 </style>
-
+    <Modal bind:open={isOpen} dialogClasses="modal-dialog-centered">
+        <div class="modal-header">
+            <h5 class="modal-title">Credits</h5>
+            <button type="button" class="close" on:click={() => (isOpen = false)}>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <h2>single-spa</h2>
+                <span>It provides a layout engine. The layout engine is responsible for creating, destroying, and rearranging dom elements during route transitions.</span>
+            </div>
+            <div>
+                <h2>Bootstrap</h2>
+                <span>It provides css transitions and tools to aid in the stying elements.</span>
+            </div>
+            <div>
+                <h2>Vue</h2>
+                <span>It is used in a microfrontend that is active when the route equals 'vue'.</span>
+            </div>
+            <div>
+                <h2>React</h2>
+                <span>It is used in a microfrontend that is active when the route equals 'react'.</span>
+            </div>
+            <div>
+                <h2>Angular</h2>
+                <span>It is used in a microfrontend that is active when the route equals 'angular'.</span>
+            </div>
+            <div>
+                <h2>Svelte</h2>
+                <span>It is used in multiple microfrontends and is active in the navbar, footer and homepage.</span>
+            </div>
+            <div>
+                <h2>chessboard-element</h2>
+                <span>It is the custom element that is at the center of the Vue, React and Angular microfrontends.</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" on:click={() => (isOpen = false)}>Close</button>
+        </div>
+    </Modal>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -148,7 +199,7 @@
                     <div class="carousel-caption text-end">
                         <h1>Javascript Frameworks</h1>
                         <p>JavaScript frameworks are application frameworks written in JavaScript where programmers can manipulate the functions and use them for their convenience.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Our Frameworks</a></p>
+                        <p><button class="btn btn-lg btn-primary" on:click={()=> (isOpen = true)}>Credits</button></p>
                     </div>
                 </div>
             </div>
@@ -170,7 +221,7 @@
 
     <div class="container marketing">
         <div class="d-flex mb-3">
-            <h1 class="mx-auto">The Featured Frameworks</h1>
+            <h1 class="mx-auto">The Featured Players</h1>
         </div>
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -226,7 +277,7 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Bootstrap v5.x.x <span class="text-muted">Build fast, responsive sites with Bootstrap</span></h2>
+                <h2 class="featurette-heading"> <img id="bootstrap-logo" src={bootstrapLogoSrc}/> Bootstrap v5.x.x <span class="text-muted">Build fast, responsive sites with Bootstrap</span></h2>
                 <p class="lead mt-2">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
             </div>
             <div class="col-md-5 order-md-1 position-relative">
@@ -245,6 +296,7 @@
                 <p class="lead mt-2">
                     The purpose of this application was to gain experience using custom elements within an Angular, React or Vue library/framework.
                     Therefore, it is only possible to play as white, though you can change the board orientation, and the moves made by the application are <a href="https://github.com/jhlywa/chess.js" target="_blank" rel="noopener noreferrer">random</a>.
+                    If you would like to play another game refresh the page. More functionality will be added in the future.
                     Custom elements compatibility with different libraries/frameworks can be viewed
                     <a href="https://custom-elements-everywhere.com/" target="_blank" rel="noopener noreferrer">here</a>.
                 </p>
