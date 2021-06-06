@@ -1,5 +1,5 @@
 <script>
-    import Modal from "sv-bootstrap-modal";
+    import CreditModal from "./components/credit-modal.svelte";
     let isOpen = false;
 
     let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
@@ -121,52 +121,9 @@
     #bootstrap-logo {
         width: 50px;
     }
-    .modal-title {
-        font-family: Bananas-Personal;
-        font-size: 60px;
-    }
+
 </style>
-    <Modal bind:open={isOpen} dialogClasses="modal-dialog-centered">
-        <div class="modal-header">
-            <h5 class="modal-title">Credits</h5>
-            <button type="button" class="close" on:click={() => (isOpen = false)}>
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="mb-2">
-                <h2>single-spa</h2>
-                <span>It provides a layout engine. The layout engine is responsible for creating, destroying, and rearranging dom elements during route transitions.</span>
-            </div>
-            <div class="mb-2">
-                <h2>Bootstrap</h2>
-                <span>It provides css transitions and tools to aid in the stying elements.</span>
-            </div>
-            <div class="mb-2">
-                <h2>Vue</h2>
-                <span>It is used in a microfrontend that is active when the route equals 'vue'.</span>
-            </div>
-            <div class="mb-2">
-                <h2>React</h2>
-                <span>It is used in a microfrontend that is active when the route equals 'react'.</span>
-            </div>
-            <div class="mb-2">
-                <h2>Angular</h2>
-                <span>It is used in a microfrontend that is active when the route equals 'angular'.</span>
-            </div>
-            <div class="mb-2">
-                <h2>Svelte</h2>
-                <span>It is used in multiple microfrontends and is active in the navbar, footer and homepage.</span>
-            </div>
-            <div class="mb-2">
-                <h2>chessboard-element</h2>
-                <span>It is the custom element that is at the center of the Vue, React and Angular microfrontends.</span>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" on:click={() => (isOpen = false)}>Close</button>
-        </div>
-    </Modal>
+   <CreditModal bind:isOpen={isOpen}></CreditModal>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -231,15 +188,6 @@
         <div class="row">
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                    <image class="w-75" x="12.5%" y="17.5%" xlink:href={ vueLogoSrc }/>
-                </svg>
-
-                <h2 class="mt-1">Vue.js</h2>
-                <p>The Progressive JavaScript Framework</p>
-                <p><a class="btn btn-secondary" href="https://v3.vuejs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
                     <image class="w-75" x="12.5%" y="13%" xlink:href={ angularLogoSrc }/>
                 </svg>
 
@@ -255,6 +203,15 @@
                 <h2 class="mt-1">React</h2>
                 <p>A JavaScript library for building user interfaces</p>
                 <p><a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    <image class="w-75" x="12.5%" y="17.5%" xlink:href={ vueLogoSrc }/>
+                </svg>
+
+                <h2 class="mt-1">Vue.js</h2>
+                <p>The Progressive JavaScript Framework</p>
+                <p><a class="btn btn-secondary" href="https://v3.vuejs.org/" target="_blank" rel="noopener noreferrer">View documentation &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
 
         </div><!-- /.row -->
