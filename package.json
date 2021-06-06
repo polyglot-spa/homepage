@@ -1,5 +1,5 @@
 {
-  "name": "@carter-website/homepage-cw",
+  "name": "@polyglot-spa/homepage",
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",

@@ -9,12 +9,12 @@ import copy from "rollup-plugin-copy-assets";
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  input: "src/carter-website-homepage-cw.js",
+  input: "src/polyglot-spa-homepage.js",
   output: {
     sourcemap: true,
     format: "system",
     name: null, // ensure anonymous System.register
-    file: "dist/carter-website-homepage-cw.js",
+    file: "dist/polyglot-spa-homepage.js",
   },
   plugins: [
     postcss({
