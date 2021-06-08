@@ -2,12 +2,19 @@
     import CreditModal from "./components/credit-modal.svelte";
     let isOpen = false;
 
-    let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
-    let vueLogoSrc = "http://localhost:5001/assets/images/vue-logo.png";
-    let angularLogoSrc = "http://localhost:5001/assets/images/angular-logo.svg";
-    let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg";
-    let svelteLogoSrc = "http://localhost:5001/assets/images/svelte-logo-horizontal.svg";
-    let bootstrapLogoSrc = "http://localhost:5001/assets/images/Bootstrap_logo.svg";
+    let singleSpaSVGSrc = "https://polyglot-spa.github.io/homepage/assets/images/single-spa-mark-magenta.svg";
+    let vueLogoSrc = "https://polyglot-spa.github.io/homepage/assets/images/vue-logo.png";
+    let angularLogoSrc = "https://polyglot-spa.github.io/homepage/assets/images/angular-logo.svg";
+    let reactLogoSrc = "https://polyglot-spa.github.io/homepage/assets/images/React-icon.svg";
+    let svelteLogoSrc = "https://polyglot-spa.github.io/homepage/assets/images/svelte-logo-horizontal.svg";
+    let bootstrapLogoSrc = "https://polyglot-spa.github.io/homepage/assets/images/Bootstrap_logo.svg";
+
+    //let singleSpaSVGSrc = "http://localhost:5001/assets/images/single-spa-mark-magenta.svg";
+    //let vueLogoSrc = "http://localhost:5001/assets/images/vue-logo.png";
+    //let angularLogoSrc = "http://localhost:5001/assets/images/angular-logo.svg";
+    //let reactLogoSrc = "http://localhost:5001/assets/images/React-icon.svg";
+    //let svelteLogoSrc = "http://localhost:5001/assets/images/svelte-logo-horizontal.svg";
+    //let bootstrapLogoSrc = "http://localhost:5001/assets/images/Bootstrap_logo.svg";
 </script>
 
 <style>
