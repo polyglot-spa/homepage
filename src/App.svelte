@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import CreditModal from "./components/credit-modal.svelte";
     let isOpen = false;
 
@@ -8,7 +9,31 @@
     let reactLogoSrc = "https://polyglot-spa-homepage.s3.us-east-2.amazonaws.com/assets/images/React-icon.svg";
     let svelteLogoSrc = "https://polyglot-spa-homepage.s3.us-east-2.amazonaws.com/assets/images/svelte-logo-horizontal.svg";
     let bootstrapLogoSrc = "https://polyglot-spa-homepage.s3.us-east-2.amazonaws.com/assets/images/Bootstrap_logo.svg";
-
+    onMount(() => {
+        let emitter;
+        let getWindowEmitterMaxTriers = null;
+        function attachEmitter() {
+            return new Promise(function (resolve, reject) {
+                waitForEmitterOnWindow(resolve, reject);
+            })
+        }
+        function waitForEmitterOnWindow(resolve, reject) {
+            if (!getWindowEmitterMaxTriers) {
+                getWindowEmitterMaxTriers = 10;
+            }
+            if (!window.emitter) {
+                if (getWindowEmitterMaxTriers > 0) {
+                    setTimeout(waitForEmitterOnWindow.bind(this, resolve, reject), 300);
+                }
+            } else {
+                resolve();
+            }
+        }
+        attachEmitter().then(function() {
+            emitter = window.emitter;
+            emitter.emit('hello', "Homepage MFE");
+        });
+    });
 </script>
 
 <style>
